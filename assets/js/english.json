@@ -1,0 +1,48 @@
+{
+  "nav": [
+    "ABOUT",
+    "SERVICE",
+    "WORK",
+    "BLOG",
+    "CONTACT"
+  ],
+  "learnMore": "Learn more",
+  "sections": [
+    "INTRO",
+    "WORK",
+    "ABOUT",
+    "CONCATS"
+  ],
+  "aboutUs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat.",
+  "status": [
+    "HAPPY CLIENT",
+    "AWARD WINNER",
+    "CUP OF COFFEE",
+    "MEMBERS",
+    "WEB DESIGN PROJECTS"
+  ],
+  "service": [
+    "Creativity is a phenomenon whereby something new and somehow valuable is formed. The created item may be intangible or a physical object.",
+    "Search engine optimization (SEO) is the process of affecting the visibility of a website or a web page in a web search engine's unpaid results.",
+    "HyperText Markup Language, commonly abbreviated as HTML, is the standard markup language used to create web pages.",
+    "With digital signals, system noise, provided it is not too great, will not change the quantification whereas with signals handled using analog processing.",
+    "Photography is the science, art and practice of creating durable images by recording light or other electromagnetic radiation.",
+    "Web design encompasses many different skills and disciplines in the production and maintenance of websites."
+  ],
+  "workshop": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n     consequat.",
+  "accordion": [
+    "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3\n     wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum\n     eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla\n     assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt\n     sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer\n     farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus\n     labore sustainable VHS. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry\n     richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck\n     quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid\n     single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore\n     wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings\n     occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of\n     them accusamus labore sustainable VHS.",
+    "  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3\n    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum\n    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla\n    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt\n    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer\n    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus\n    labore sustainable VHS. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry\n    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck\n    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid\n    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore\n    wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings\n    occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of\n    them accusamus labore sustainable VHS.",
+    "  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3\n    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum\n    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla\n    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt\n    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer\n    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus\n    labore"
+  ],
+  "clints": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo illo cupiditate temporibus sapiente, sint,voluptatibus tempora esse. Consectetur voluptate nihil quo nulla voluptatem dolorem harum nostrum",
+  "blog": {
+    "title": "LOREM IPSUM DOLOR SIT AMET",
+    "des": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "footer": {
+    "footerDes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n    ex ea commodo consequat.",
+    "Follow": "Follow Us:",
+    "more": "View more photos"
+  }
+}

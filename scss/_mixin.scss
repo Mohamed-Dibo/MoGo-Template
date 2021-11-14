@@ -1,0 +1,83 @@
+//placeholder
+%center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%header-content {
+  position: relative;
+  padding-bottom: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  span {
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 3rem;
+    height: 2px;
+    background-color: #f38181;
+    transform: translateX(-50%);
+  }
+}
+//mixin
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@mixin title-section($padding-bottom, $width_pragraph: false) {
+  text-align: center;
+  padding-bottom: $padding-bottom;
+  h2 {
+    @extend %header-content;
+  }
+  @if $width_pragraph {
+    p {
+      margin: 0 auto;
+      padding-top: 20px;
+      color: #999;
+      max-width: 750px;
+    }
+  }
+}
+// small
+@mixin small {
+  @media (min-width: $small) {
+    @content;
+  }
+}
+// medium
+@mixin medium {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+// large
+@mixin large {
+  @media (min-width: $large) {
+    @content;
+  }
+}
+// x-large
+@mixin x-large {
+  @media (min-width: $x-large) {
+    @content;
+  }
+}
+// xx-large
+@mixin xx-large {
+  @media (min-width: $xx-large) {
+    @content;
+  }
+}

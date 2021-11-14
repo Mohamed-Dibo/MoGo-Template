@@ -1,0 +1,782 @@
+@import "./variables";
+@import "./mixin";
+// global
+html{
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+p {
+  color: $primaryText-color;
+  font-size: 13px;
+}
+i {
+  color: $icons-color;
+  font-size: 30px;
+  margin-right: 20px;
+}
+img {
+  max-width: 100%;
+}
+// global
+// header
+header {
+  background-image: url(../images/bg-header.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .main-header {
+    position: relative;
+    z-index: 999;
+  }
+  &:after {
+    content: "";
+    @include overlay;
+    background-image: linear-gradient(
+      to bottom,
+      $primaryAlpha-color,
+      $secondaryAlpha-color
+    );
+  }
+  .navbar {
+    .navbar-toggler:focus {
+      box-shadow: none;
+      .navbar-toggler-icon {
+        background-image: none;
+      }
+    }
+    .navbar-brand {
+      color: $White-color;
+      padding: 15px;
+      font-weight: 600;
+      &:hover,
+      &.active {
+        color: $secondary-color;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          text-transform: uppercase;
+          color: $White-color;
+          margin: 0 15px;
+          font-size: 0.9rem;
+          padding: 10px;
+          &:hover:not(.icon),
+          &.active {
+            color: $secondary-color;
+            border-bottom: 3px solid $secondary-color;
+          }
+          i {
+            color: $White-color;
+            font-size: 0.9rem;
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .carousel {
+    .carousel-inner {
+      bottom: 60px;
+    }
+    .indicator-wrap {
+      width: 22%;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        height: 3px;
+        width: 0%;
+        background-color: $primary-color;
+        transition: width 0.3s linear;
+      }
+      &:hover {
+        &::after {
+          width: 35%;
+        }
+      }
+      .carousel-indicators [data-bs-target] {
+        height: 2px;
+      }
+    }
+    .carousel-item .header-title {
+      @include medium {
+        font-size: 110px;
+      }
+      @include small {
+        font-size: 90px;
+      }
+      font-size: 3rem;
+      text-align: center;
+      color: $White-color;
+      line-height: 1;
+      padding-bottom: 60px;
+      position: relative;
+      font-weight: 700;
+      text-transform: uppercase;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 2px;
+        background: $White-color;
+      }
+      .head {
+        @include medium {
+          font-size: 42px;
+        }
+        @include small {
+          font-size: 30px;
+        }
+        font-size: 1.3rem;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        font-family: cursive;
+        font-style: italic;
+        font-weight: 400;
+        text-transform: capitalize;
+      }
+    }
+    .learn-btn {
+      text-decoration: none;
+      color: $White-color;
+      padding: 5px 20px;
+      border: 1px solid;
+    }
+  }
+}
+// <!-- About --> =========================================================================>
+.About {
+  padding: $section-padding 0;
+  .title-About {
+    @include title-section(75px, true);
+  }
+  .boxs {
+    .box {
+      position: relative;
+      cursor: pointer;
+      &:hover img {
+        opacity: 0.7;
+      }
+      .overlay {
+        @extend %center-content;
+        @include overlay;
+        background-image: linear-gradient(
+          to bottom,
+          $primaryAlpha-color,
+          $secondaryAlpha-color
+        );
+        color: $White-color;
+        box-shadow: 10px 10px 1px $icons-color;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          @include small {
+            transform: translate(-10px, -10px);
+          }
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+// <!-- About --> =========================================================================>
+// <!------------------------------- Status --------------------------->
+.Status {
+  padding: $section-padding 0;
+  background-color: $icons-color;
+  color: $White-color;
+  .boxs-wrap {
+    .box {
+      .number {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+// <!------------------------------- Status --------------------------->
+// <!------------------------------- services --------------------------->
+.services {
+  padding: $section-padding 0;
+  .service-title {
+    @include title-section(50px);
+  }
+  .services-content {
+    .service-wrap {
+      @include medium {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          border-bottom: 1px solid $border-color;
+        }
+      }
+      @include large {
+        &:nth-child(4) {
+          border-bottom: none;
+        }
+      }
+      .service {
+        display: flex;
+        i {
+          margin: 0 20px;
+        }
+        p {
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+}
+
+// <!------------------------------- services --------------------------->
+
+// <!------------------------------- unique design --------------------------->
+.unique_design {
+  padding: $section-padding 0 0;
+  background-image: url("../images/unique-design/bg-unique-design.jpg");
+  background-size: cover;
+  .uniqueDesign-title {
+    @include title-section(40px);
+  }
+  .uniqueDesign-description {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    .uniqueDesign-small-figure {
+      position: absolute;
+      bottom: -74px;
+      left: 83%;
+      display: none;
+      @include medium {
+        display: block;
+      }
+    }
+  }
+}
+// <!------------------------------- unique design --------------------------->
+// <!------------------------------- workshop --------------------------->
+.workshop {
+  padding: $section-padding 0;
+  .title-workshop {
+    @include title-section(50px, true);
+  }
+  i {
+    margin: 0 20px;
+  }
+  .collaps-wrap {
+    .box-collapse {
+      max-height: 200px;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 5px;
+        cursor: pointer;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $icons-color;
+        border-radius: 30px;
+      }
+      &::-webkit-scrollbar-track {
+        width: 4px;
+        background-color: rgba(204, 204, 204, 0.753);
+        margin: 16px 0;
+      }
+    }
+  }
+  .sliders-icon {
+    transform: rotate(90deg);
+  }
+}
+// <!------------------------------- workshop --------------------------->
+// <!------------------------------ slider ------------------->
+
+.image {
+  img {
+    border-radius: 50%;
+    border: 3px solid $border-color;
+  }
+  display: none;
+  text-align: right;
+  i {
+    padding: 16px;
+    border: 2px solid $icons-color;
+    font-size: 65px;
+    color: $icons-color;
+  }
+  @include medium {
+    display: block;
+  }
+}
+.carousel {
+  background: #f8f8f8;
+  padding: 60px 0;
+  .content {
+    q {
+      font-size: 1rem;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 10px;
+      @include small {
+        font-size: 18px;
+      }
+    }
+    .name {
+      font-size: 18px;
+      font-style: italic;
+      display: flex;
+      i {
+        color: $primary-color;
+        margin: 0 5px;
+      }
+    }
+  }
+  .arrow {
+    font-size: 40px;
+    color: $border-color;
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    background-image: none;
+    i {
+      color: $border-color;
+    }
+  }
+}
+// <!------------------------------ slider ------------------->
+// <!------------------------------- our team --------------------------->
+.ourTeam {
+  padding: $section-padding 0;
+  .title-ourTeam {
+    @include title-section(50px, true);
+  }
+  .boxs {
+    .box {
+      @include medium {
+        margin-bottom: 0;
+      }
+      .caption {
+        margin-top: 20px;
+        @include medium {
+          margin-top: 25px;
+        }
+        h4 {
+          font-size: 0.9rem;
+          margin-bottom: 8px;
+        }
+      }
+      figure {
+        position: relative;
+        cursor: pointer;
+        &:hover img {
+          opacity: 0.7;
+        }
+        .overlay {
+          @extend %center-content;
+          @include overlay;
+          background-image: linear-gradient(
+            to bottom,
+            $primaryAlpha-color,
+            $secondaryAlpha-color
+          );
+          color: $White-color;
+          box-shadow: 10px 10px 1px $icons-color;
+          opacity: 0;
+          transition: all 0.4s ease-in-out;
+          &:hover {
+            @include small {
+              transform: translate(-10px, -10px);
+            }
+            opacity: 1;
+          }
+
+          i {
+            color: $primary-color;
+            background-color: $secondary-color;
+            padding: 7px 11px;
+            margin: 1px;
+
+            &:hover {
+              color: $White-color;
+              background: $primary-color;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// <!------------------------------- our team --------------------------->
+// <!------------------------------- brands --------------------------->
+.brands {
+  padding: 30px 0;
+  background: #f8f8f8;
+  figure img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+}
+
+// <!------------------------------- brands--------------------------->
+// <!-------------------------------  OUR WORK --------------------------->
+.our-work {
+  padding: $section-padding 0 0;
+  .title-ourWork {
+    @include title-section(50px, true);
+  }
+  .box {
+    figure {
+      position: relative;
+      &:hover .overlay {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+    .overlay {
+      @include overlay;
+      opacity: 0;
+      text-align: center;
+      background: linear-gradient(
+        to bottom,
+        $primaryAlpha-color,
+        $secondaryAlpha-color
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 300ms ease 0s;
+      .overlay-content {
+        text-align: center;
+        color: $White-color;
+        font-size: 16px;
+        span {
+          font-size: 13px;
+        }
+        i {
+          margin-left: 20px;
+          color: $White-color;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+// <!-------------------------------  OUR WORK --------------------------->
+// <!------------------------------- clints--------------------------->
+.clints_happy {
+  padding: $section-padding 0;
+  background-image: url(../images/happy-client/bg-happy-client.jpg);
+  background-size: cover;
+
+  .title-clints {
+    @include title-section(50px, false);
+  }
+  .box {
+    display: flex;
+    margin-bottom: 30px;
+    figure {
+      margin: 0 30px;
+      img {
+        border-radius: 50%;
+        border: 1px solid $border-color;
+      }
+    }
+    .info {
+      h4 {
+        margin-bottom: 12px;
+        position: relative;
+        font-size: 14px;
+        color: #333;
+
+        span {
+          color: $primaryText-color;
+          display: block;
+          font-style: italic;
+          margin-top: 10px;
+        }
+        i {
+          color: $primary-color;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// <!------------------------------- clints--------------------------->
+// <!------------------------------- Blog--------------------------->
+.blog {
+  padding: $section-padding 0;
+
+  .title-clints {
+    @include title-section(50px, false);
+  }
+
+  .box {
+    margin-bottom: 40px;
+
+    @include medium {
+      margin-bottom: 0;
+    }
+    figure {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto 20px;
+      @include medium {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .date {
+        h5 {
+          font-size: 18px;
+          font-weight: bold;
+          @include large {
+            font-size: 28px;
+          }
+          @include medium {
+            font-size: 23px;
+          }
+          @include medium {
+            font-size: 20px;
+          }
+        }
+        span {
+          font-size: 13px;
+          @include medium {
+            font-size: 15px;
+          }
+        }
+        position: absolute;
+        background: $icons-color;
+        left: -10px;
+        bottom: 10px;
+        padding: 10px 15px;
+        color: $White-color;
+        text-align: center;
+      }
+    }
+    .info-blog {
+      text-align: center;
+      @include medium {
+        text-align: left;
+      }
+      h4 {
+        color: #2ec06c;
+        font-size: 14px;
+        margin-bottom: 10px;
+        @include medium {
+          font-size: 18px;
+        }
+      }
+      p {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+      }
+      .icons {
+        padding-top: 20px;
+        span {
+          display: inline-block;
+          color: $primaryText-color;
+          &:last-child {
+            margin-left: 10px;
+          }
+          i {
+            font-size: 15px;
+            margin: 0 8px 0;
+            @include medium {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// <!------------------------------- Blog--------------------------->
+// <!------------------------------- map--------------------------->
+.map {
+  padding: 50px 0;
+  background-image:url(../images/map/bg-map.jpg);
+  background-size: cover;
+  .title-map {
+    @include title-section(0, false);
+    h2 {
+      font-size: 25px;
+    }
+    h2,
+    span i {
+      color: $primary-color;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+}
+// <!------------------------------- map--------------------------->
+// <!------------------------------- footer -------------------------->
+footer {
+  padding-top: 50px;
+  background: #f8f8f8;
+  .mogo {
+    margin-bottom: 30px;
+    @include large {
+      margin-bottom: 0;
+    }
+    .logo a {
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 40px;
+      font-weight: 700;
+      color: $border-color;
+      text-decoration: none;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .contact-box {
+      .followers {
+        color: #333;
+        font-weight: 500;
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        span {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+      .social-icons {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title {
+          font-style: italic;
+          font-weight: 300;
+          display: inline-block;
+          margin-right: 15px;
+        }
+        i {
+          font-size: 15px;
+          margin: 0;
+        }
+      }
+    }
+    form {
+      .email::placeholder {
+        font-size: 1rem;
+        font-style: italic;
+        color: $secondaryText-color;
+      }
+      .btn {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 15px;
+        background: $icons-color;
+        border: none;
+        padding: 0.8rem 1.3rem;
+        border: 0;
+      }
+    }
+  }
+  .Blogs {
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      margin: 0 0 25px;
+      color: $secondaryText-color;
+      padding-left: 15px;
+    }
+    .blogs-box {
+      list-style: none;
+      padding: 0 15px 0;
+      li {
+        display: flex;
+        figure {
+          width: fit-content;
+        }
+        p {
+          font-size: 12px;
+          margin: 0 0 5px;
+          line-height: 1.4;
+          color: #1c1b1b;
+          font-weight: 600;
+          margin-left: 13px;
+          @include xx-large {
+            margin-left: 0;
+          }
+          span {
+            display: block;
+            color: $secondaryText-color;
+            padding-top: 5px;
+            font-size: 14px;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+  .insta {
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      margin: 0 0 25px;
+      color: $secondaryText-color;
+    }
+    .Gallary {
+      figure {
+        cursor: pointer;
+        margin-bottom: 2px;
+        width: 70px;
+        display: inline-block;
+      }
+    }
+    .more {
+      color: $primaryText-color;
+      font-style: italic;
+      margin-top: 10px;
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+  .copyright {
+    margin: 30px 0 0;
+    border-top: 1px solid $border-color;
+    padding: 20px 0;
+    text-align: center;
+    color: $primaryText-color;
+    font-size: 13px;
+    @include small {
+      font-size: 1rem;
+    }
+    h6 span {
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+}
+// <!------------------------------- footer -------------------------->
